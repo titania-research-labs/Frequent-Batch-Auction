@@ -6,11 +6,11 @@ contract FrequentBatchAuction {
     enum Side { Ask, Bid }
 
     struct Order {
-        string token0;    // 取引のペアを表す文字列の前者, 例: "ETH"
-        string token1;    // 取引のペアを表す文字列の後者, 例: "USDC"
-        Side side;  // 注文のタイプ, AskまたはBid
-        uint amount;      // 注文量 (シンボルの前者の単位)
-        uint price;       // 注文価格 (シンボルの後者の単位)
+        string token0;    // The first part of the trading pair, e.g., "ETH"
+        string token1;    // The second part of the trading pair, e.g., "USDC"
+        Side side;        // The type of order, either Ask or Bid
+        uint amount;      // Order amount (in units of the first symbol), e.g., 1 ETH
+        uint price;       // Order price (in units of the second symbol), e.g., 1000 USDC
     }
 
     Order[] public orders;

@@ -12,7 +12,7 @@ contract FrequentBatchAuctionTest is Test {
     }
 
     function test_placeOrder() public {
-        fba.placeOrder("ETH", "USDC", FrequentBatchAuction.OrderType.Ask, 1, 1000);
+        fba.placeOrder("ETH", "USDC", FrequentBatchAuction.Side.Ask, 1, 1000);
         assertEq(fba.getNumOfOrders(), 1);
     }
 
